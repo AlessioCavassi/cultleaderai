@@ -7,65 +7,155 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <div class="container">
         <canvas id="bgAnimation" class="background-canvas"></canvas>
         
+        <div class="bg-glow left"></div>
+        <div class="bg-glow right"></div>
+        
         <header>
             <div class="profile">
                 <div class="avatar">
                     <img src="image_fx_.jpg" alt="CultLeaderAI">
+                    <div class="avatar-badge">PRO</div>
                 </div>
-                <h1>CultLeaderAI</h1>
-                <p class="bio">Sfrutta l'AI per velocizzare il tuo lavoro 
-
-                </p>
+                <h1><span class="highlight">CultLeader</span>AI</h1>
+                <p class="bio">Sfrutta l'<span class="text-highlight">AI</span> per dominare il tuo workflow. <span class="text-accent">Veloce. Potente. Senza limiti.</span></p>
+                
+                <div class="profile-tags">
+                    <span class="tag">AI Tools</span>
+                    <span class="tag">Tech</span>
+                    <span class="tag">Future</span>
+                </div>
             </div>
         </header>
         
         <main>
+            <div class="section-heading">
+                <span class="line"></span>
+                <h2>I Nostri Progetti</h2>
+                <span class="line"></span>
+            </div>
+            
             <div class="links">
                 <a href="instagram://media?id=DHoS-XKNVt0" class="link-item primary" target="_blank">
                     <span class="link-icon"><img src="reels/image_fx_ (16).JPG" alt="Fortnite Icon" class="icon-image"></span>
-                    <span class="link-text">Fortnite in 60's</span>
+                    <div class="link-content">
+                        <span class="link-text">Fortnite in 60's</span>
+                        <span class="link-desc">Estetica vintage sul battle royale più famoso</span>
+                    </div>
+                    <div class="link-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                 </a>
                 
                 <a href="instagram://media?id=DHbNCPYtmmQ" class="link-item secondary" target="_blank">
                     <span class="link-icon"><img src="reels/image_fx_ 2.JPG" alt="Gemini Icon" class="icon-image"></span>
-                    <span class="link-text">La potenza di Gemini 2.0</span>
+                    <div class="link-content">
+                        <span class="link-text">La potenza di Gemini 2.0</span>
+                        <span class="link-desc">L'AI di Google sta cambiando il gioco</span>
+                    </div>
+                    <div class="link-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                 </a>
                 
                 <a href="#" class="link-item tertiary">
-                    <span class="link-icon">💌</span>
-                    <span class="link-text">Prossimamente</span>
+                    <span class="link-icon">
+                        <div class="coming-soon-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </span>
+                    <div class="link-content">
+                        <span class="link-text">Prossimamente</span>
+                        <span class="link-desc">Nuovi contenuti in arrivo</span>
+                    </div>
+                    <div class="link-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                 </a>
             </div>
         </main>
         
+        <div class="cta-section">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h3>Stai cercando <span class="text-highlight">nuove soluzioni</span>?</h3>
+                    <p>Seguici per rimanere aggiornato sulle ultime novità e tool AI</p>
+                </div>
+                <a href="https://www.instagram.com/cult_leader_ai?igsh=aGRlYXF1ejltNWpy&utm_source=qr" class="cta-button">
+                    <span>Segui su Instagram</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
         <footer>
-            <p>&copy; 2025 CultLeaderAI</p>
+            <div class="footer-content">
+                <p> 2025 <span class="highlight">CultLeaderAI</span></p>
+                <div class="footer-tagline">ELEVATE YOUR TECH</div>
+            </div>
         </footer>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Initialize GSAP
+            gsap.registerPlugin(ScrollTrigger);
+            
             // GSAP Animations
             const timeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
             
             // Stagger the elements entrance
-            timeline.from('.avatar', { y: 30, opacity: 0, duration: 0.8 })
+            timeline.from('.avatar', { y: 30, opacity: 0, duration: 0.8, rotation: -5 })
+                   .from('.avatar-badge', { scale: 0, opacity: 0, duration: 0.5 }, '-=0.3')
                    .from('h1', { y: 20, opacity: 0, duration: 0.5 }, '-=0.4')
                    .from('.bio', { y: 20, opacity: 0, duration: 0.5 }, '-=0.3')
+                   .from('.profile-tags', { y: 15, opacity: 0, duration: 0.4 }, '-=0.2')
+                   .from('.section-heading', { opacity: 0, duration: 0.5 }, '-=0.1')
                    .from('.link-item', { 
                        y: 30, 
                        opacity: 0, 
                        duration: 0.5, 
                        stagger: 0.15,
                        clearProps: "all" 
-                   }, '-=0.2');
+                   }, '-=0.2')
+                   .from('.cta-section', { y: 20, opacity: 0, duration: 0.6 }, '-=0.1')
+                   .from('.footer-content', { y: 10, opacity: 0, duration: 0.4 }, '-=0.2');
+            
+            // Scroll animations
+            gsap.utils.toArray('.link-item').forEach((link, i) => {
+                ScrollTrigger.create({
+                    trigger: link,
+                    start: 'top bottom-=100',
+                    toggleClass: 'link-visible',
+                    once: true,
+                    onEnter: () => {
+                        gsap.to(link, {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.6,
+                            delay: i * 0.1
+                        });
+                    }
+                });
+            });
             
             // Hover effects for links using GSAP
             document.querySelectorAll('.link-item').forEach(link => {
@@ -75,6 +165,12 @@
                         duration: 0.3,
                         ease: 'power2.out'
                     });
+                    
+                    gsap.to(this.querySelector('.link-arrow'), {
+                        x: 5,
+                        opacity: 1,
+                        duration: 0.3
+                    });
                 });
                 
                 link.addEventListener('mouseleave', function() {
@@ -82,6 +178,12 @@
                         scale: 1, 
                         duration: 0.3,
                         ease: 'power2.out'
+                    });
+                    
+                    gsap.to(this.querySelector('.link-arrow'), {
+                        x: 0,
+                        opacity: 0.7,
+                        duration: 0.3
                     });
                 });
             });
@@ -97,6 +199,18 @@
                             ? 'https://www.instagram.com/reel/DHoS-XKNVt0/?igsh=MXkxdHk4c2s3cGltMw==' 
                             : 'https://www.instagram.com/reel/DHbNCPYtmmQ/?igsh=ZjVkbjB2aHd2aXo=';
                             
+                        // Add click animation
+                        gsap.to(this, {
+                            scale: 0.98,
+                            duration: 0.1,
+                            onComplete: () => {
+                                gsap.to(this, {
+                                    scale: 1,
+                                    duration: 0.2
+                                });
+                            }
+                        });
+                        
                         // Set a timeout to redirect to web version if app doesn't open
                         setTimeout(() => {
                             window.location.href = webFallbackUrl;
@@ -121,7 +235,7 @@
             
             // Create particles
             const particles = [];
-            const particleCount = 20; 
+            const particleCount = 30; 
             
             function createParticles() {
                 for (let i = 0; i < particleCount; i++) {
@@ -129,9 +243,10 @@
                         x: Math.random() * canvas.width,
                         y: Math.random() * canvas.height,
                         radius: Math.random() * 2 + 1, 
-                        color: i % 3 === 0 ? '#3498db' : i % 3 === 1 ? '#2c3e50' : '#e74c3c',
+                        color: i % 3 === 0 ? '#2f7df5' : i % 3 === 1 ? '#252a3b' : '#ff2b51',
                         speed: Math.random() * 0.3 + 0.1, 
-                        direction: Math.random() * Math.PI * 2
+                        direction: Math.random() * Math.PI * 2,
+                        opacity: Math.random() * 0.5 + 0.2
                     });
                 }
             }
@@ -143,12 +258,15 @@
                     ctx.beginPath();
                     ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
                     ctx.fillStyle = p.color;
-                    ctx.globalAlpha = 0.3; 
+                    ctx.globalAlpha = p.opacity;
                     ctx.fill();
                     
                     // Move particles
                     p.x += Math.cos(p.direction) * p.speed;
                     p.y += Math.sin(p.direction) * p.speed;
+                    
+                    // Pulse effect
+                    p.radius += Math.sin(Date.now() * 0.003) * 0.03;
                     
                     // Bounce off walls
                     if (p.x < 0 || p.x > canvas.width) {
@@ -167,11 +285,11 @@
                         const dy = particles[i].y - particles[j].y;
                         const distance = Math.sqrt(dx * dx + dy * dy);
                         
-                        if (distance < 120) { 
+                        if (distance < 150) { 
                             ctx.beginPath();
                             ctx.strokeStyle = particles[i].color;
-                            ctx.globalAlpha = 0.05 * (1 - distance / 120); 
-                            ctx.lineWidth = 0.5;
+                            ctx.globalAlpha = 0.07 * (1 - distance / 150);
+                            ctx.lineWidth = 0.6;
                             ctx.moveTo(particles[i].x, particles[i].y);
                             ctx.lineTo(particles[j].x, particles[j].y);
                             ctx.stroke();
@@ -184,6 +302,28 @@
             
             createParticles();
             drawParticles();
+            
+            // Mouse interaction with particles
+            const mousePos = { x: undefined, y: undefined };
+            
+            window.addEventListener('mousemove', (e) => {
+                mousePos.x = e.x;
+                mousePos.y = e.y;
+                
+                // Push particles away from mouse
+                particles.forEach(p => {
+                    const dx = p.x - mousePos.x;
+                    const dy = p.y - mousePos.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 100) {
+                        const angle = Math.atan2(dy, dx);
+                        const force = (100 - distance) / 100;
+                        p.x += Math.cos(angle) * force * 2;
+                        p.y += Math.sin(angle) * force * 2;
+                    }
+                });
+            });
         });
     </script>
 </body>
