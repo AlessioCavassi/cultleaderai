@@ -28,12 +28,12 @@
         
         <main>
             <div class="links">
-                <a href="https://www.instagram.com/p/DHoS-XKNVt0/" class="link-item primary" target="_blank">
+                <a href="instagram://media?id=DHoS-XKNVt0" class="link-item primary" target="_blank">
                     <span class="link-icon"><img src="reels/image_fx_ (16).JPG" alt="Fortnite Icon" class="icon-image"></span>
                     <span class="link-text">Fortnite in 60's</span>
                 </a>
                 
-                <a href="https://www.instagram.com/p/DHbNCPYtmmQ/" class="link-item secondary" target="_blank">
+                <a href="instagram://media?id=DHbNCPYtmmQ" class="link-item secondary" target="_blank">
                     <span class="link-icon"><img src="reels/image_fx_ 2.JPG" alt="Gemini Icon" class="icon-image"></span>
                     <span class="link-text">La potenza di Gemini 2.0</span>
                 </a>
@@ -84,6 +84,26 @@
                         ease: 'power2.out'
                     });
                 });
+            });
+            
+            // Handle Instagram links - fallback to web if app URL doesn't work
+            document.querySelectorAll('.link-item').forEach(link => {
+                if (link.href.includes('instagram://')) {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const postId = this.href.split('instagram://media?id=')[1];
+                        // Try to use the full app link with params as backup
+                        const webFallbackUrl = postId === 'DHoS-XKNVt0' 
+                            ? 'https://www.instagram.com/reel/DHoS-XKNVt0/?igsh=MXkxdHk4c2s3cGltMw==' 
+                            : 'https://www.instagram.com/reel/DHbNCPYtmmQ/?igsh=ZjVkbjB2aHd2aXo=';
+                            
+                        // Set a timeout to redirect to web version if app doesn't open
+                        setTimeout(() => {
+                            window.location.href = webFallbackUrl;
+                        }, 500);
+                        window.location.href = this.href;
+                    });
+                }
             });
             
             // Canvas Background Animation 
